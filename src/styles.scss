@@ -1,0 +1,111 @@
+#root {
+  display: flex;
+  justify-content: center;
+}
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(to right, HSL(209, 57%, 53%), HSL(207, 73%, 63%));
+  min-width: 340px;
+}
+
+.palette-main {
+  color: HSL(300, 100%, 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.palette-header {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  align-self: center;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 2.3rem;
+}
+
+.updated-at {
+  font-size: 0.7rem;
+  padding-left: 0.3rem;
+}
+
+/*##### begin container and cards #####*/
+.palette-container {
+  display: flex;
+  padding: 2rem 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.palette-info-div {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 40%;
+  justify-content: space-evenly;
+}
+
+.palette-image-div {
+  flex: 0 0 40%;
+}
+
+.palette-div {
+  display: flex;
+  gap: 3rem;
+  flex: 0 0 100%;
+  justify-content: center;
+}
+
+.palette-title-div {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.palette-owner-time-div {
+  font-size: 0.8rem;
+}
+
+.view-votes {
+  font-weight: 600;
+  font-size: 0.8rem;
+  background-color: HSL(209, 50%, 43%);
+  padding: 0.2rem;
+  text-align: center;
+  border-radius: 0.13rem;
+  display: inline-block;
+}
+
+@media (min-width: 980px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .palette-main {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .palette-header {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .palette-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .palette-div {
+    flex: 0 1 40%;
+  }
+}
